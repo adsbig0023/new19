@@ -1,344 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Meta Pixel Code -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#102c65">
+<title>Blue Horizon | Market Learning</title>
+
+<!-- Add your Meta Pixel ID -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
+const PIXEL_ID = "YOUR_PIXEL_ID";
+if(PIXEL_ID && PIXEL_ID !== "YOUR_PIXEL_ID"){
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;n=f.fbq=function(){
+n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=true;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=true;
 t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
+s.parentNode.insertBefore(t,s)
+}(window,document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1153618500545856');
-fbq('track', 'PageView');
+fbq('init',PIXEL_ID);
+fbq('track','PageView');
+}
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1153618500545856&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>GAUTAM JHA</title>
-
-  <!-- Meta Pixel Code
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-
-    fbq('init', 'YOUR_PIXEL_ID');
-    fbq('track', 'PageView');
-  </script>
-  -->
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #ffffff;
-      color: #172033;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 700px;
-      margin: auto;
-      padding: 35px 22px 25px;
-      text-align: center;
-    }
-
-    /* PROFILE */
-    .profile {
-      width: 190px;
-      height: 190px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 7px solid #2450ff;
-      box-shadow: 0 8px 25px rgba(36,80,255,.22);
-      display: block;
-      margin: 10px auto 45px;
-    }
-
-    /* LIVE BADGE */
-    .live {
-      position: relative;
-      display: inline-block;
-    }
-
-    .live span {
-      position: absolute;
-      right: -12px;
-      bottom: 5px;
-      background: #ff5454;
-      color: white;
-      font-weight: 800;
-      padding: 10px 19px;
-      border-radius: 25px;
-      font-size: 18px;
-      box-shadow: 0 7px 16px rgba(255,84,84,.25);
-    }
-
-    /* BLUE LABEL */
-    .label {
-      background: linear-gradient(90deg,#2148ff,#2865e8);
-      color: white;
-      font-size: 23px;
-      font-weight: 800;
-      letter-spacing: 4px;
-      padding: 17px 15px;
-      border-radius: 40px;
-      margin-bottom: 35px;
-      box-shadow: 0 8px 22px rgba(37,81,255,.20);
-    }
-
-    h1 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 35px;
-      font-weight: 800;
-      margin-bottom: 22px;
-    }
-
-    .verified {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 28px;
-      height: 28px;
-      background: #239fe8;
-      color: white;
-      border-radius: 50%;
-      font-family: Arial;
-      font-size: 18px;
-      vertical-align: middle;
-      margin-left: 5px;
-    }
-
-    .subtitle {
-      color: #687b98;
-      font-size: 25px;
-      line-height: 1.55;
-      margin-bottom: 55px;
-    }
-
-    /* TELEGRAM BUTTON */
-    .telegram-btn {
-      display: block;
-      text-decoration: none;
-      background: linear-gradient(90deg,#20c45b,#13ad4d);
-      color: white;
-      font-size: 25px;
-      font-weight: 800;
-      padding: 25px 15px;
-      border-radius: 34px;
-      margin-bottom: 50px;
-      box-shadow: 0 8px 20px rgba(20,190,80,.18);
-      transition: .2s;
-    }
-
-    .telegram-btn:active {
-      transform: scale(.98);
-    }
-
-    /* FEATURES */
-    .feature {
-      display: flex;
-      align-items: center;
-      text-align: left;
-      border: 2px solid #e0e7f0;
-      background: #fbfcfe;
-      border-radius: 28px;
-      padding: 25px 27px;
-      margin-bottom: 28px;
-      font-size: 22px;
-      font-weight: 700;
-      color: #35455d;
-    }
-
-    .icon {
-      font-size: 27px;
-      width: 45px;
-      flex-shrink: 0;
-    }
-
-    /* DISCLAIMER */
-    .line {
-      border-top: 2px dashed #ccd6e5;
-      margin-top: 75px;
-      padding-top: 40px;
-    }
-
-    .disclaimer {
-      text-align: left;
-      color: #71839f;
-      font-size: 17px;
-      line-height: 1.65;
-    }
-
-    /* AGENCY */
-    .agency {
-      margin-top: 38px;
-      padding-top: 25px;
-      border-top: 1px solid #e6ebf2;
-      font-size: 16px;
-      color: #8a9bb5;
-    }
-
-    .agency a {
-      color: #2450ff;
-      text-decoration: none;
-      font-weight: 800;
-    }
-
-    .copyright {
-      margin-top: 28px;
-      color: #9aabc1;
-      font-family: Georgia, serif;
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    /* MOBILE */
-    @media(max-width: 480px) {
-
-      .container {
-        padding: 25px 18px 20px;
-      }
-
-      .profile {
-        width: 165px;
-        height: 165px;
-        margin-bottom: 42px;
-      }
-
-      .live span {
-        font-size: 15px;
-        padding: 8px 14px;
-      }
-
-      .label {
-        font-size: 18px;
-        letter-spacing: 3px;
-        padding: 15px 10px;
-      }
-
-      h1 {
-        font-size: 29px;
-      }
-
-      .subtitle {
-        font-size: 20px;
-        margin-bottom: 42px;
-      }
-
-      .telegram-btn {
-        font-size: 20px;
-        padding: 22px 10px;
-        border-radius: 28px;
-        margin-bottom: 40px;
-      }
-
-      .feature {
-        font-size: 18px;
-        padding: 22px 18px;
-        border-radius: 22px;
-        margin-bottom: 20px;
-      }
-
-      .disclaimer {
-        font-size: 15px;
-      }
-    }
-  </style>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+ min-height:100svh;
+ background:#eaf0fa;
+ font-family:Arial,sans-serif;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ padding:10px;
+ color:#10244c;
+}
+.page{
+ width:100%;
+ max-width:400px;
+ min-height:min(760px,calc(100svh - 20px));
+ background:#fff;
+ border-radius:8px;
+ overflow:hidden;
+ display:flex;
+ flex-direction:column;
+ justify-content:space-between;
+ box-shadow:0 15px 45px #102c6520;
+}
+.hero{
+ background:#102c65;
+ color:#fff;
+ padding:22px 20px 26px;
+ position:relative;
+ text-align:center;
+}
+.hero:after{
+ content:"";
+ position:absolute;
+ width:160px;height:160px;
+ border:1px solid #ffffff25;
+ border-radius:50%;
+ right:-65px;top:-70px;
+}
+.brand{
+ font-size:10px;
+ letter-spacing:4px;
+ color:#b9d2ff;
+ font-weight:bold;
+}
+.logo{
+ width:88px;height:88px;
+ border-radius:50%;
+ border:4px solid #fff;
+ object-fit:cover;
+ margin:15px auto 10px;
+ display:block;
+ background:#dce6f8;
+}
+h1{
+ font-size:25px;
+ letter-spacing:.5px;
+ margin:6px 0;
+}
+.hero p{
+ color:#d5e2ff;
+ font-size:12px;
+ line-height:1.5;
+}
+.join{
+ display:block;
+ width:90%;
+ margin:16px auto 0;
+ background:#ff9d38;
+ color:#172c52;
+ text-decoration:none;
+ padding:15px 10px;
+ font-weight:900;
+ font-size:14px;
+ letter-spacing:1px;
+ border-radius:5px;
+}
+.main{
+ padding:20px 21px 12px;
+ flex:1;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+}
+.eyebrow{
+ color:#e58a2d;
+ font-size:10px;
+ letter-spacing:3px;
+ font-weight:bold;
+}
+.heading{
+ font-size:22px;
+ line-height:1.2;
+ margin:8px 0;
+ color:#102c65;
+}
+.description{
+ font-size:12px;
+ line-height:1.6;
+ color:#687791;
+}
+.line{
+ height:1px;
+ background:#dce4f0;
+ margin:15px 0;
+}
+.topic{
+ display:flex;
+ align-items:center;
+ gap:12px;
+ padding:9px 0;
+ border-bottom:1px solid #e9edf4;
+ text-align:left;
+}
+.number{
+ color:#e58a2d;
+ font-weight:900;
+ font-size:20px;
+ min-width:28px;
+}
+.topic b{
+ display:block;
+ font-size:12px;
+ color:#183565;
+}
+.topic small{
+ display:block;
+ color:#8490a5;
+ font-size:10px;
+ margin-top:3px;
+}
+.warning{
+ background:#f0f4fb;
+ border-left:3px solid #ff9d38;
+ padding:10px;
+ color:#63718b;
+ font-size:10px;
+ line-height:1.5;
+ margin-top:13px;
+}
+.bottom{
+ padding:12px 16px 14px;
+ text-align:center;
+}
+.links{
+ display:flex;
+ justify-content:center;
+ flex-wrap:wrap;
+ gap:15px;
+ margin-bottom:13px;
+}
+.links a{
+ color:#435b84;
+ font-size:10px;
+ text-decoration:none;
+ font-weight:bold;
+}
+.credit{
+ background:#102c65;
+ border-radius:5px;
+ padding:12px;
+}
+.credit a{
+ color:#ffd27e;
+ font-size:12px;
+ font-weight:900;
+ letter-spacing:1.5px;
+ text-decoration:none;
+}
+@media(max-height:680px){
+ .hero{padding:12px 15px}
+ .logo{width:66px;height:66px;margin:8px auto}
+ .main{padding:10px 18px}
+ .line{margin:8px 0}
+ .topic{padding:6px 0}
+ .warning{margin-top:7px}
+ .bottom{padding:8px 12px}
+}
+</style>
 </head>
 
 <body>
+<main class="page">
 
-  <div class="container">
+<section class="hero">
+ <div class="brand">BLUE HORIZON • LEARNING</div>
+ <img src="logo.png" class="logo" alt="Profile">
+ <h1>MARKET LEARNING HUB</h1>
+ <p>Discover financial knowledge. Understand market concepts.</p>
 
-    <!-- PROFILE PHOTO -->
-    <div class="live">
-      <img src="logo.png" class="profile" alt="Trading Profile">
-      <span>LIVE</span>
-    </div>
+ <a class="join"
+ href="https://t.me/YOUR_TELEGRAM"
+ target="_blank" rel="noopener noreferrer"
+ onclick="trackTelegram()">
+ JOIN TELEGRAM &nbsp; →
+ </a>
+</section>
 
-    <!-- TOP LABEL -->
-    <div class="label">
-      TRADING COMMUNITY
-    </div>
+<section class="main">
+ <div class="eyebrow">YOUR LEARNING JOURNEY</div>
+ <div class="heading">Explore the world of markets.</div>
+ <p class="description">
+ A simple educational space to understand stock market
+ terminology, research concepts and financial risk.
+ </p>
 
-    <!-- TITLE -->
-    <h1>
-      GAUTAM JHA
-      <span class="verified">✓</span>
-    </h1>
+ <div class="line"></div>
 
-    <p class="subtitle">
-      Mastering Index Trading &amp; Price Action<br>
-      with Simplicity.
-    </p>
+ <div class="topic">
+  <span class="number">01</span>
+  <div><b>Market Fundamentals</b>
+  <small>Learn how financial markets work.</small></div>
+ </div>
 
-    <!-- TELEGRAM BUTTON -->
-    <a href="https://t.me/+bmWsdTSYKiJkNjBl"
-       class="telegram-btn"
-       target="_blank">
-      🚀 &nbsp; JOIN FREE TELEGRAM
-    </a>
+ <div class="topic">
+  <span class="number">02</span>
+  <div><b>Technical Concepts</b>
+  <small>Understand charts and terminology.</small></div>
+ </div>
 
-    <!-- FEATURES -->
-    <div class="feature">
-      <span class="icon">📈</span>
-      <span>Live Index Market Analysis</span>
-    </div>
+ <div class="topic">
+  <span class="number">03</span>
+  <div><b>Research & Awareness</b>
+  <small>Explore research and risk concepts.</small></div>
+ </div>
 
-    <div class="feature">
-      <span class="icon">💡</span>
-      <span>Simple Price Action Strategy</span>
-    </div>
+ <div class="warning">
+  Educational information only. Not investment advice.
+  Markets involve risk and returns are never guaranteed.
+ </div>
+</section>
 
-    <div class="feature">
-      <span class="icon">🛡️</span>
-      <span>SEBI Registered Entity</span>
-    </div>
+<footer class="bottom">
+ <nav class="links">
+  <a href="content.html">CONTENT</a>
+  <a href="disclaimer.html">DISCLAIMER</a>
+  <a href="privacy.html">PRIVACY POLICY</a>
+ </nav>
+ <div class="credit">
+  <a href="https://t.me/YOUR_SNOWADS_TELEGRAM"
+  target="_blank" rel="noopener noreferrer">
+  AD MANAGE BY SNOWADS
+  </a>
+ </div>
+</footer>
 
-    <!-- DISCLAIMER -->
-    <div class="line">
-      <p class="disclaimer">
-        Disclaimer: Investment in securities market are subject to market
-        risks. Read all the related documents carefully before investing.
-        Registration granted by SEBI and certification from NISM in no way
-        guarantee performance of the intermediary or provide any assurance
-        of returns to investors. All content shared is for educational and
-        informational purposes only.
-      </p>
-    </div>
+</main>
 
-    <!-- ADS MANAGE BY -->
-    <div class="agency">
-      Ads Manage By
-      <a href="https://t.me/+cvb_x5G0F5MwY2Fl" target="_blank">
-        Snow Agency
-      </a>
-    </div>
-
-    <div class="copyright">
-      GAUTAM JHA · © 2026
-    </div>
-
-  </div>
-
+<script>
+function trackTelegram(){
+ if(typeof fbq==="function"){
+  fbq('trackCustom','TelegramButtonClick');
+ }
+}
+</script>
 </body>
 </html>
